@@ -1,0 +1,230 @@
+    1  ls
+    2  mkdir filesTest1
+    3  ls
+    4  vi text.txt
+    5  ls
+    6  vi text.txt
+    7  clear
+    8  ls
+    9  cat text.txt
+   10  pwd
+   11  man
+   12  man man
+   13  man ls -1
+   14  man ls -l
+   15  man ls
+   16  ls
+   17  mkdir ProgrammingTest
+   18  cd ProgrammingTest
+   19  touch firstViTest.java
+   20  vi firstViTest.java
+   21  ls
+   22  vi firstViTest.java
+   23  ls
+   24  vi firstViText.java
+   25  cat firstViTest.java
+   26  exit
+   27  ls
+   28  exit
+   29  ls
+   30  less text.txt
+   31  cd ~
+   32  exit
+   33  ip
+   34  ip a
+   35  ls
+   36  touch answers.md
+   37  vi answers.md 
+   38  git
+   39  sudo apt install git -y
+   40  su -
+   41  sudo apt install firefox
+   42  sudo apt install brave
+   43  [200~sudo snap install discord   ~
+   44  sudo snap install discord   
+   45  su -
+   46  man sudo
+   47  sudo -u
+   48  sudo adduser arisercubick sudo
+   49  su -
+   50  sudo adduser arisercubick sudo
+   51  sudo whoami
+   52  su -
+   53  sudo whoami
+   54  whoami
+   55  ls
+   56  cd ProgrammingTest/
+   57  ls
+   58  less firstViTest.java 
+   59  exit
+   60  su -
+   61  ppwd
+   62  pwd
+   63  ls
+   64  git
+   65  sudo
+   66  sudo -r
+   67  sudo help
+   68  man sudo
+   69  ls
+   70  cat answers.md 
+   71  vi answers.md 
+   72  cat text.txt 
+   73  cd filesTest1/
+   74  ls
+   75  cd ..
+   76  cd ProgrammingTest/
+   77  ls
+   78  home
+   79  su -
+   80  clear
+   81  apt list
+   82  clear
+   83  cd ..
+   84  man git
+   85  git
+   86  ls
+   87  ls -ali
+   88  man ls
+   89  find
+   90  man find
+   91  man ls
+   92  man -a
+   93  ls a
+   94  ls -a
+   95  mkdir 261
+   96  ls
+   97  mv 261 lab01-cli
+   98  cd lab01-cli/
+   99  pwd
+  100  touch [1;5B[1;5A
+  101  touch docfile1.docx
+  102  touch docfile2.docx
+  103  touch docfile3.docx
+  104  touch txtfile1.txt
+  105  touch txtfile2.txt
+  106  touch txtfile3.txt
+  107  touch txtfile4.txt
+  108  ls
+  109  cd lab01-cli/
+  110  ls
+  111  d ..
+  112  cd ..
+  113  git clone https://gitlab.com/ArisJohnApolinario/linuxnotes.git
+  114  mv lab01-cli/ linuxnotes/
+  115  ls
+  116  cd linuxnotes/
+  117  ls
+  118  git status
+  119  git add .
+  120  cd ..
+  121  cd ProgrammingTest/
+  122  vi firstViTest.java 
+  123  cd ..
+  124  cd linuxnotes/
+  125  git commit -m "First commit over the linux vm"
+  126  git push
+  127  ls
+  128  cd lab01-cli/
+  129  ls
+  130  rm ''$'\033''[1'
+  131  git add .
+  132  git commit -m "Some changes"
+  133  git push
+  134  ls
+  135  cd linuxnotes/
+  136  ls
+  137  cd lab01-cli/
+  138  ls
+  139  cd ..
+  140  git
+  141  git status
+  142  history
+  143  cls
+  144  clear
+  145  2name=hel
+  146  N3amehelp
+  147  N3ame=HEllo
+  148  _2name=fwehfw
+  149  Name_4=fwe
+  150  _NAME1=efwqfwefwefwe
+  151  $_NAME1
+  152  2name=efwf
+  153  clear
+  154  echo N3ame
+  155  echo $N3ame
+  156  echo $_NAME1
+  157  1_name=wefwef
+  158  echo 2name
+  159  echo $2name
+  160  echo $1_name
+  161  echo $N3ame
+  162  echo $_2name
+  163  _NAME1=jfjfjfjf
+  164  echo $_Name1
+  165  echo $_2name
+  166  echo $2name
+  167  echo $1_name
+  168  echo 1_name
+  169  exit
+  170  clear
+  171  echo $_2name
+  172  echo $1_name
+  173  echo $2name
+  174  echo $2NaMe
+  175  friends=Fred Jim
+  176  ls
+  177  cd filesTest1/
+  178  ls
+  179  $ echo HOME
+  180  echo HOME
+  181  echo $HOME
+  182  num=16
+  183  echo $num
+  184  nuM=5
+  185  echo $nUM
+  186  PS1="$\u@\h"
+  187  dw
+  188  echo
+  189  echo PS1
+  190  exit
+  191  PS1="\w :"
+  192  ed
+  193  de
+  194  echo $PS1
+  195  exit
+  196  echo $PS1
+  197  ls
+  198  PS1=”\h\W # “
+  199  echo $PS1
+  200  exit
+  201  echo $PS1
+  202  history
+  203  history14
+  204  history14 14
+  205  PS1="\w :"
+  206  exit
+  207  PS1="\H $ "
+  208  exit
+  209  history
+  210  ! 14
+  211  man ls -l
+  212  mkdir 261
+  213  ls
+  214  mkdir test_dir && cd test_dir
+  215  cd ..
+  216  ls
+  217  cd linuxnotes/
+  218  ls
+  219  mkdir lab-02GradedScript
+  220  ls
+  221  cd lab-02GradedScript/
+  222  touch my_lab02_script.sh
+  223  vi my_lab02_script.sh 
+  224  bash my_lab02_script.sh 
+  225  vi my_lab02_script.sh 
+  226  bash my_lab02_script.sh 
+  227  git add .
+  228  git commit -m "script added"
+  229  git push
+  230  history > history.txt
