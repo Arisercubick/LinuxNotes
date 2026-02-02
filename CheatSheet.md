@@ -37,7 +37,7 @@ $ git add .
 This adds a commit point for the git repository
 
 ```
-$ git commit -m "message"
+$ git commit -m "[message]"
 ```
 
 This pushes any changes made through commits into an online repository
@@ -92,19 +92,19 @@ $ tail [file]
 
 ## Working with files and directories
 
-This creates a new empty directory. "mk" meaning make, "dir" meaning directory
+This creates a new empty directory. `mk` meaning make, `dir` meaning directory
 
 ```
 $ mkdir [name]
 ```
 
-This removes an **empty** directory. "rm" meaning remove, "dir" meaning directory. Got be forceful and recursive to remove all contents (note, dir decided to not exist)
+This removes an **empty** directory. `rm` meaning remove, `dir` meaning directory. Got be forceful and recursive to remove all contents (note, dir decided to not exist)
 
 ```
 $ rmdir [directory]
 ```
 
-This removes files and directories, and to repeat said action within a content, you need to do be forceful and recursive "rf". Showing some more utility
+This removes files and directories, and to repeat said action within a content, you need to do be forceful and recursive `rf`. Showing some more utility
 
 ```
 $ rm [options] [content]
@@ -116,7 +116,7 @@ This copies content from one place to another. This is from the name **c**o**p**
 $ cp [source] [destination]
 ```
 
-This just moves files. "mv" meaning the short hand for **m**o**v**e. Unfortunately not a free movie command
+This just moves files. `mv` meaning the short hand for **m**o**v**e. Unfortunately not a free movie command
 
 ```
 $ mv [source] [destination]
