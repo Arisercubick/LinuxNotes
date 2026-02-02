@@ -90,6 +90,26 @@ This prints into the terminal the tail of the file, so the last 10 lines
 $ tail [file]
 ```
 
+## Basic commands to handle the terminal
+
+This changes the directory/locations where you are in. As the name implies, **C**hange **D**irectory or **C**ontrolling **D**irectory. The path can be absolute or not
+
+```
+cd [path]
+```
+
+This shows the **l**i**s**ts of directories or files in a directory. You can use `-a` to list all information and `-l` to lists paths and combining them like `-ali` will do both
+
+```
+ls
+```
+
+This is the **man**ual of a command. This shows what operations the command does and do.
+
+```
+man [command]
+```
+
 ## Working with files and directories
 
 This creates a new empty directory. `mk` meaning make, `dir` meaning directory
