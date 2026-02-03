@@ -191,7 +191,14 @@ The last line mode is the global control over the file. To enter this, you need 
 
 ## Creating scripts
 
+Scripting in bash is usually in a .sh file for bash
+
+```
+filename.sh
+```
+
 Shebang, it represents the interpreter used to interpret the script of the file
+By convention in Unix systems, it is on the top
 
 In this example, this will execute bash
 
