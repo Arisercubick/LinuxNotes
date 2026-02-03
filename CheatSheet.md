@@ -156,6 +156,12 @@ $ mv <source> <destination>
 $ mv <source> <newname> (changes the source name)
 ```
 
+This repeats a line or input from the input 
+
+```bash
+$ echo <message>
+```
+
 ## Keyboard shortcuts
 
 - `ctrl` + `r` this searches information in the terminal
