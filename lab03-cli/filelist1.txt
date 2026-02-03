@@ -1,0 +1,5 @@
+total 12
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  3 12:10 DOCFILES
+-rw-rw-r-- 1 arisercubick arisercubick    0 Feb  3 12:18 filelist1.txt
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  3 12:12 files
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  3 12:09 TXTFILES
