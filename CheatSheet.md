@@ -37,7 +37,7 @@ $ git add .
 This adds a commit point for the git repository
 
 ```bash
-$ git commit -m "[message]"
+$ git commit -m "<message>"
 ```
 
 This pushes any changes made through commits into an online repository
@@ -63,31 +63,31 @@ $ git clone
 This concatenates files and output something standard in a standard yet terrible way
 
 ```bash
-$ cat [file]
+$ cat <file>
 ```
 
 displays the content of the file into the terminal
 
 ```bash
-$ more [file]
+$ more <file>
 ```
 
 Contrary to popular belief, less does more than more. It can go both backwards and forwards unlike more
 
 ```bash
-$ less [file]
+$ less <file>
 ```
 
 This ouputs the head of the files. Which is why it is called head, since it outputs the first 10 lines
 
 ```bash
-$ head [file]
+$ head <file>
 ```
 
 This prints into the terminal the tail of the file, so the last 10 lines
 
 ```bash
-$ tail [file]
+$ tail <file>
 ```
 
 ## Basic commands to handle the terminal
@@ -95,7 +95,7 @@ $ tail [file]
 This changes the directory/locations where you are in. As the name implies, **C**hange **D**irectory or **C**ontrolling **D**irectory. The path can be absolute or not
 
 ```bash
-$ cd [path]
+$ cd <path>
 ```
 
 This shows the **l**i**s**ts of directories or files in a directory. You can use `-a` to list all information and `-l` to lists paths and combining them like `-ali` will do both
@@ -104,16 +104,18 @@ This shows the **l**i**s**ts of directories or files in a directory. You can use
 $ ls
 ```
 
+## Asking help from the system
+
 This is the **man**ual of a command. This shows what operations the command does and do. Only works for **external commands**
 
 ```bash
-$ man [command]
+$ man <command>
 ```
 
 This shows information of an internal command when you need **HELP**
 
 ```bash
-# help [command]
+$ help <command>
 ```
 
 ## Working with files and directories
@@ -121,38 +123,44 @@ This shows information of an internal command when you need **HELP**
 This creates a new empty directory. `mk` meaning make, `dir` meaning directory
 
 ```bash
-$ mkdir [name]
+$ mkdir <name>
 ```
 
 This removes an **empty** directory. `rm` meaning remove, `dir` meaning directory. Got be forceful and recursive to remove all contents (note, dir decided to not exist)
 
 ```bash
-$ rmdir [directory]
+$ rmdir <directory>
 ```
 
 This removes files and directories, and to repeat said action within a content, you need to do be forceful and recursive `rf`. Showing some more utility
 
 ```bash
-$ rm [content]
-$ rm -rf [content] (Recursively remove forcefully the data)
+$ rm <content>
+$ rm -rf <content> (Recursively remove forcefully the data)
 ```
 
 This copies content from one place to another. This is from the name **c**o**p**y This is contrary to another popular version of this abbreviation
 
 ```bash
-$ cp [source] [destination]
-$ cp [source] [newname] (Copies with a new name) 
-$ cp -u [source] [destination] (Copies with an update)
-$ cp -i [source] [destination] (Initializes a prompt)
-$ cp -r [source directory] (Copies directory and its content recursively)
+$ cp <source> <destination>
+$ cp <source> <newname> (Copies with a new name) 
+$ cp -u <source> <destination> (Copies with an update)
+$ cp -i <source> <destination> (Initializes a prompt)
+$ cp -r <source directory]>(Copies directory and its content recursively)
 ```
 
 This just moves files. `mv` meaning the short hand for **m**o**v**e. Unfortunately not a free movie command
 
 ```bash
-$ mv [source] [destination]
-$ mv [source] [newname] (changes the source name)
+$ mv <source> <destination>
+$ mv <source> <newname> (changes the source name)
 ```
+
+## Keyboard shortcuts
+
+- `ctrl` + `r` this searches information in the terminal
+- `ctrl` + `shift` + `c` copies from the command
+- `ctrl` + `shift` + `v`  or `right click` pastes from the command
 
 ## Working with terminal vi
 
