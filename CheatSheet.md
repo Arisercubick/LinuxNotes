@@ -188,3 +188,13 @@ The last line mode is the global control over the file. To enter this, you need 
 - `w` means to write the new input contents of the file into memory
 - `q` means to quit from the file
 - `!` means to forcefully quit from a specific task
+
+## Creating scripts
+
+Shebang, it represents the interpreter used to interpret the script of the file
+
+In this example, this will execute bash
+
+```sh
+#!/bin/bash
+```
