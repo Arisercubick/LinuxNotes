@@ -1,0 +1,6 @@
+total 16
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  6 12:34 DOCFILES
+-rw-rw-r-- 1 arisercubick arisercubick  382 Feb  6 12:34 file_creation.sh
+-rw-rw-r-- 1 arisercubick arisercubick    0 Feb  6 12:34 filelist1.txt
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  6 12:34 files
+drwxrwxr-x 2 arisercubick arisercubick 4096 Feb  6 12:34 TXTFILES
