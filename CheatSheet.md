@@ -104,6 +104,21 @@ This shows the **l**i**s**ts of directories or files in a directory. You can use
 $ ls
 ```
 
+piping content is using the pipe `|` to send a process to another process
+
+```bash
+$ <command> | <the command that the previous command is sending to>
+```
+
+For example, if you use `ps aux`, you can pipe it to less to use less
+
+```bash
+$ ps aux | less
+
+Output: the output of ps aux but able to use less manipulation
+```
+
+
 ## Asking help from the system
 
 This is the **man**ual of a command. This shows what operations the command does and do. Only works for **external commands**
@@ -205,3 +220,74 @@ In this example, this will execute bash
 ```sh
 #!/bin/bash
 ```
+
+## Sudo and installing software
+
+### Package management
+
+This is application management as an utility to manage software
+
+```bash
+$ apt
+```
+
+To install applications, you can do apt install
+
+```bash
+$ apt install
+```
+
+### Sudo
+
+Sudo is not as powerful as the root. However, it helps manages with alot of priorities 
+
+```bash
+$ sudo
+```
+
+to install sudo, you need to install it via the root. This is the case as sudo will give commands to the user
+
+```bash
+# apt install sudo
+```
+
+You also need to add users using sudo to give priveleges 
+
+```bash
+# sudo usermod -aG sudo username
+```
+
+## Control and monitor processes
+
+To see all of the processes with a command, you ue `top`, similar to task manager in windows. It displays the processes of the current operating system
+
+```bash
+$ top
+```
+
+This gives a snapshot of the processes 
+
+```bash
+$ ps
+$ ps a (Shows all of the processes)
+$ ps aux (Shows all of the processes as a snapshot)
+```
+
+to kill a process, you use `kill` against the process id `pID`
+
+```bash
+$ kill <pID>
+```
+
+`sleep` delays a process, the number afterwards is the amount of time a process
+
+```bash
+$ sleep <number>
+```
+
+In sleep, it will be delayed in the background to allow multitasking, to see the jobs, you can do `jobs`
+
+```bash
+$ jobs
+```
+
