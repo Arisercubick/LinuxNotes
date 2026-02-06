@@ -161,7 +161,7 @@ $ cp <source> <destination>
 $ cp <source> <newname> (Copies with a new name) 
 $ cp -u <source> <destination> (Copies with an update)
 $ cp -i <source> <destination> (Initializes a prompt)
-$ cp -r <source directory]>(Copies directory and its content recursively)
+$ cp -r <source directory>(Copies directory and its content recursively)
 ```
 
 This just moves files. `mv` meaning the short hand for **m**o**v**e. Unfortunately not a free movie command
@@ -186,6 +186,12 @@ $ echo <message>
 ## Working with terminal vi
 
 In the terminal's vi, there is the multiple modes, there is the; `Last Line mode`, `Command mode`, `Input mode`
+
+When you use `vi` solely, you will be able to edit files that are already existing or create a new file if it doesnt exist
+
+```bash
+$ vi <fileName>
+```
 
 ### buttons in the command mode
 
