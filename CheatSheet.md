@@ -446,4 +446,14 @@ This will append the error message created into the `error.txt`
 - `&>` This will function both as the error redirection and output redirection. Also flushes the target
 - `&>>` This will function both as the error redirection and output redirection but appending the output to the target
 
+### More information about globbing
+
+You can use quotations or backslashes to prevent globbing
+
+For example:
+```bash
+$ echo "?"
+$ echo \?
+```
+
 
