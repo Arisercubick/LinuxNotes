@@ -329,11 +329,6 @@ Groups: pubs
 size: 1048
 Date (and time) of modification: 06-10 10:44
 filename: memo
-```
-
-
-
-
 
 For shortcuts
 `ctrl + c`: Closes a job
@@ -364,5 +359,4 @@ It works as like aliases for a file
 To create one you do
 
 ```bash
-ln -s <target_file> <name_of_soft_link>
-```
+ln -s <target_file> <name_of_soft
