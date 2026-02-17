@@ -370,9 +370,7 @@ Globbing is the act of using wildcards
 
 For example:
 ```bash
-
 $ ls file.*
-
 ```
 This will look for every extensions from `txt` to `docx` and so on
 
@@ -380,9 +378,7 @@ This will look for every extensions from `txt` to `docx` and so on
 
 For example:
 ```bash
-
 $ ls file?.txt
-
 ```
 This will look for every file.txt file that can fill the void, so from `file0.txt` to `filez.txt` and even `file!.txt`
 
@@ -390,26 +386,22 @@ This will look for every file.txt file that can fill the void, so from `file0.tx
 
 For example:
 ```bash
-
 $ ls file[0-9]
 
 # To exclude, you do
 
 $ ls file[^0-9]
-
 ```
 This will look for every file between 0 to 9 in the end so file1, file2, file0, file9 and so on
 
 - `{ }` instead of reading this will write new files based on the range or parameters
 
 ```bash
-
 $ touch file{a,b,c,d}.txt
 
 # To create a range, you do
 
 $ touch file{a..d}.txt
-
 ```
 
 ## Redirections
@@ -419,9 +411,7 @@ This will redirect output
 - `<` This will redirect the input of the command
 
 ```bash
-
 $ mail exampleMail@exampleService.com < message.txt
-
 ```
 In this example, all input inside `message.txt` will be redirected to the command mail
 
@@ -429,16 +419,12 @@ In this example, all input inside `message.txt` will be redirected to the comman
 - `>>` This will append the output to the target
 
 ```bash
-
 $ cat example.txt > message.txt
-
 ```
 This will flush the content of the `message.txt` and add the new cat of the `example.txt`
 
 ```bash
-
 $ cat example.txt >> message.txt
-
 ```
 This will add on the information in the `message.txt` and add the new information of the `example.txt`
 
@@ -447,16 +433,12 @@ This will add on the information in the `message.txt` and add the new informatio
 - `2>>` This will append the error to the target
 
 ```bash
-
 $ copy x y 2> error.txt
-
 ```
 This will flush all information in the `error.txt` and create the new error
 
 ```bash
-
 $ copy x y 2>> error.txt
-
 ```
 This will append the error message created into the `error.txt`
 
