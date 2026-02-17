@@ -333,7 +333,7 @@ filename: memo
 For shortcuts
 `ctrl + c`: Closes a job
 `ctrl + z`: Put a job in the background
-
+```
 
 ## Links
 
@@ -360,3 +360,108 @@ To create one you do
 
 ```bash
 ln -s <target_file> <name_of_soft
+```
+
+## Globbing
+
+Globbing is the act of using wildcards
+
+- `*` This searches for all possible characters from the beginning or end 
+
+For example:
+```bash
+
+$ ls file.*
+
+```
+This will look for every extensions from `txt` to `docx` and so on
+
+- `?` This searches for all characters but only one character 
+
+For example:
+```bash
+
+$ ls file?.txt
+
+```
+This will look for every file.txt file that can fill the void, so from `file0.txt` to `filez.txt` and even `file!.txt`
+
+- `[ - ]` will read the filename for everything within the range
+
+For example:
+```bash
+
+$ ls file[0-9]
+
+# To exclude, you do
+
+$ ls file[^0-9]
+
+```
+This will look for every file between 0 to 9 in the end so file1, file2, file0, file9 and so on
+
+- `{ }` instead of reading this will write new files based on the range or parameters
+
+```bash
+
+$ touch file{a,b,c,d}.txt
+
+# To create a range, you do
+
+$ touch file{a..d}.txt
+
+```
+
+## Redirections
+
+This will redirect output
+
+- `<` This will redirect the input of the command
+
+```bash
+
+$ mail exampleMail@exampleService.com < message.txt
+
+```
+In this example, all input inside `message.txt` will be redirected to the command mail
+
+- `>` This will redirect the ouput of a command. This will flush all information of the target then add the new one.
+- `>>` This will append the output to the target
+
+```bash
+
+$ cat example.txt > message.txt
+
+```
+This will flush the content of the `message.txt` and add the new cat of the `example.txt`
+
+```bash
+
+$ cat example.txt >> message.txt
+
+```
+This will add on the information in the `message.txt` and add the new information of the `example.txt`
+
+
+- `2>` This will redirect all errors of the command. This will also flush the information first
+- `2>>` This will append the error to the target
+
+```bash
+
+$ copy x y 2> error.txt
+
+```
+This will flush all information in the `error.txt` and create the new error
+
+```bash
+
+$ copy x y 2>> error.txt
+
+```
+This will append the error message created into the `error.txt`
+
+
+- `&>` This will function both as the error redirection and output redirection. Also flushes the target
+- `&>>` This will function both as the error redirection and output redirection but appending the output to the target
+
+
