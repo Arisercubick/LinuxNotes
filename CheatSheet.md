@@ -296,4 +296,38 @@ In sleep, it will be delayed in the background to allow multitasking, to see the
 ```bash
 $ jobs
 ```
+## Linux file system - Filename
+
+- On linux, **everthing is a file**. The term file is commonly used to denote a file of any type:
+	- Documents, directories, drives, etc are addressed as fuke
+	- Devces (NIC, printer) are considered as device files
+
+To look at the files in a directory, you use `ls`
+
+```bash
+$ ls -l
+```
+
+This is to see long names
+Each file has an associated user ID and group that define the owner of the file of the group
+
+```bash
+$ ls -l
+
+-rwxr-x-x+ 1 sam pubs 1048 06-10 10:44 memo
+
+Type of file: -rwxr
+File access ermissions: -xr
+ACL flag: x+
+number: 1
+file owner: sam
+Groups: pubs
+size: 1048
+Date (and time) of modification: 06-10 10:44
+filename: memo
+```
+
+
+
+
 
