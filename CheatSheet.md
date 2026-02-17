@@ -279,13 +279,17 @@ $ ps a (Shows all of the processes)
 $ ps aux (Shows all of the processes as a snapshot)
 ```
 
-to kill a process, you use `kill` against the process id `pID`
+to kill a process, you use `kill` against the process id `pID`, and to force kill, it is `-9` which is the highest levels which goes from `-1` to `-9`
 
 ```bash
 $ kill <pID>
+or
+$ kill %<jobID>
+or to force
+$ kill -9
 ```
 
-`sleep` delays a process, the number afterwards is the amount of time a process
+`sleep` delays a process, the number afterwards is the amount of time a process, by default, it is by seconds
 
 ```bash
 $ sleep <number>
@@ -331,3 +335,34 @@ filename: memo
 
 
 
+For shortcuts
+`ctrl + c`: Closes a job
+`ctrl + z`: Put a job in the background
+
+
+## Links
+
+
+### Hard Links
+
+create a hard link with
+```bash
+$ ln <target_file> <name of the new file>
+```
+
+Hard links is the aboslute path to the file
+
+You can check the pointers by doing
+```bash
+$ ls -ali
+```
+
+### Soft links
+
+It works as like aliases for a file
+
+To create one you do
+
+```bash
+ln -s <target_file> <name_of_soft_link>
+```
