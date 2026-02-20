@@ -457,3 +457,38 @@ $ echo \?
 ```
 
 
+## Alias
+
+Alias is a temporary way to execute a specific command
+
+```bash
+$ alias <alias_name>=`<command>`
+```
+
+You can also overwrite commands in the system
+
+In here, you can also make it permanent via
+
+```
+$ vi ~/bashrc
+```
+And put you in the new alias in the place
+
+
+## Algorithms
+
+In bash or terminal, there is a way where you can execute the command first then return it, similar to calling a method or function
+
+```
+$ echo $(date)
+
+or
+
+$ echo $`date`
+```
+Both of these will output the string date and outting it into a variable
+
+One could also store into a variable like
+```bash
+$ variable_name=$(<command>)
+```
