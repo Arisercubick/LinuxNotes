@@ -265,13 +265,13 @@ $ sudo
 to install sudo, you need to install it via the root. This is the case as sudo will give commands to the user
 
 ```bash
-# apt install sudo
+$ apt install sudo
 ```
 
 You also need to add users using sudo to give priveleges 
 
 ```bash
-# sudo usermod -aG sudo username
+$ sudo usermod -aG sudo username
 ```
 
 ## Control and monitor processes
@@ -340,11 +340,11 @@ Groups: pubs
 size: 1048
 Date (and time) of modification: 06-10 10:44
 filename: memo
+```
 
 For shortcuts
 `ctrl + c`: Closes a job
 `ctrl + z`: Put a job in the background
-```
 
 ## Links
 
@@ -399,7 +399,7 @@ For example:
 ```bash
 $ ls file[0-9]
 
-# To exclude, you do
+### To exclude, you do
 
 $ ls file[^0-9]
 ```
@@ -410,12 +410,22 @@ This will look for every file between 0 to 9 in the end so file1, file2, file0, 
 ```bash
 $ touch file{a,b,c,d}.txt
 
-# To create a range, you do
+### To create a range, you do
 
 $ touch file{a..d}.txt
 ```
 
 ## Redirections
+
+### Standard I/O descriptors
+
+In this context, `std` stands for standard
+`>`, `>>` stdout - 1 (Standard output)
+`<` stdin - 0 (Standard input)
+`2>`, `2>>` stderr - 2 (Standard error)
+`&>`, `&>>` stdout+stderr (Standard output and Standard error)
+
+### Explanations
 
 This will redirect output
 
@@ -456,6 +466,17 @@ This will append the error message created into the `error.txt`
 
 - `&>` This will function both as the error redirection and output redirection. Also flushes the target
 - `&>>` This will function both as the error redirection and output redirection but appending the output to the target
+
+These will redirect only to with files
+
+### Pipping
+
+Similar to redirection, piping brings the ouput to another command
+```bash
+$ <cmd1> | <cmd2>
+```
+
+It is basically an output redirection but for commands since the standard `>` wont bring an output to another command
 
 ### More information about globbing
 
@@ -536,3 +557,22 @@ This is used to make sure it is only passed to a specific script
 ```bash
 $ temp_value=<value> <script_name>
 ```
+
+## Bash Processing
+
+In Bash, there is steps that bash takes before processing
+
+### Exit code
+
+In bash, after doing a command, bash creating an exit status in `$?` from the previous command
+
+so for example, when you ran
+
+```bash
+$ echo $?
+```
+
+It will output a number which indicated what happened. For some;
+- `0` means the command was a success
+- `1` means an error in the command
+- `126` means the command is not executable
