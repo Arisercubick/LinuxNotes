@@ -177,6 +177,17 @@ This repeats a line or input from the input
 $ echo <message>
 ```
 
+This will zip a file using the `g` app
+
+```bash
+$ gzip <source>
+```
+
+This will unzip a file
+```bash
+4 gunzip <file>
+```
+
 ## Keyboard shortcuts
 
 - `ctrl` + `r` this searches information in the terminal
@@ -506,6 +517,8 @@ $USER
 ```
 By convention, they are all uppercase
 
+### Temporary variables
+
 To make your own environmental variable, you can do 
 ```bash
 $ export variable_name=<variable_name>
@@ -514,7 +527,7 @@ This will make the variable the default for the current process
 
 To make it default for the system, you need to access the `.profile` in `/etc/`
 
-### Temporary variables
+#### Script exclusive environment variable
 
 To make a variable temporary to a current script, you need to pass it through a specfic script
 
