@@ -492,3 +492,34 @@ One could also store into a variable like
 ```bash
 $ variable_name=$(<command>)
 ```
+
+## Environment Variables
+
+Environment variables are variables that are used by the entire system for apps or interaction
+
+Default environmental variables are
+```bash
+$PATH
+$PWD
+$HOME
+$USER
+```
+By convention, they are all uppercase
+
+To make your own environmental variable, you can do 
+```bash
+$ export variable_name=<variable_name>
+```
+This will make the variable the default for the current process
+
+To make it default for the system, you need to access the `.profile` in `/etc/`
+
+### Temporary variables
+
+To make a variable temporary to a current script, you need to pass it through a specfic script
+
+This is used to make sure it is only passed to a specific script
+
+```bash
+$ temp_value=<value> <script_name>
+```
