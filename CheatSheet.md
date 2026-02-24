@@ -399,7 +399,7 @@ For example:
 ```bash
 $ ls file[0-9]
 
-### To exclude, you do
+# To exclude, you do
 
 $ ls file[^0-9]
 ```
@@ -410,7 +410,7 @@ This will look for every file between 0 to 9 in the end so file1, file2, file0, 
 ```bash
 $ touch file{a,b,c,d}.txt
 
-### To create a range, you do
+# To create a range, you do
 
 $ touch file{a..d}.txt
 ```
@@ -501,7 +501,7 @@ You can also overwrite commands in the system
 
 In here, you can also make it permanent via
 
-```
+```bash
 $ vi ~/bashrc
 ```
 And put you in the new alias in the place
@@ -511,7 +511,7 @@ And put you in the new alias in the place
 
 In bash or terminal, there is a way where you can execute the command first then return it, similar to calling a method or function
 
-```
+```bash
 $ echo $(date)
 
 or
