@@ -562,6 +562,17 @@ $ temp_value=<value> <script_name>
 
 In Bash, there is steps that bash takes before processing
 
+### 1
+
+### 2: Set up & Lookup
+
+After Bash sets up the environments and commands
+
+### 3: Execution
+
+Once the bash finds the command, it executes it
+
+
 ### Exit code
 
 In bash, after doing a command, bash creating an exit status in `$?` from the previous command
