@@ -587,3 +587,25 @@ It will output a number which indicated what happened. For some;
 - `0` means the command was a success
 - `1` means an error in the command
 - `126` means the command is not executable
+
+
+## Looking in Files
+
+In linux systems, there are two commands called `files` and `grep`
+
+It applies globbing.
+- `find`: Search by file type
+- `grep`: Search inside files
+
+### grep
+
+grep goes into files and find matchines
+
+```bash
+$ grep [options] "pattern" [filename]
+```
+
+Options include:
+`-i` for ignore case sensitivity so `grep -i "error"` will include "Error", "ERROR" and "ErRoR"
+`-v` for invert the match so lines that dont contain the patter
+`-w` matches whole words in the line
