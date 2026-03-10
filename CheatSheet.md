@@ -37,7 +37,7 @@ $ git add .
 This adds a commit point for the git repository
 
 ```bash
-$ git commit -m "<message>"
+$ git commit -m "[message]"
 ```
 
 This pushes any changes made through commits into an online repository
@@ -63,31 +63,31 @@ $ git clone
 This concatenates files and output something standard in a standard yet terrible way
 
 ```bash
-$ cat <file>
+$ cat [file]
 ```
 
 displays the content of the file into the terminal
 
 ```bash
-$ more <file>
+$ more [file]
 ```
 
 Contrary to popular belief, less does more than more. It can go both backwards and forwards unlike more
 
 ```bash
-$ less <file>
+$ less [file]
 ```
 
 This ouputs the head of the files. Which is why it is called head, since it outputs the first 10 lines
 
 ```bash
-$ head <file>
+$ head [file]
 ```
 
 This prints into the terminal the tail of the file, so the last 10 lines
 
 ```bash
-$ tail <file>
+$ tail [file]
 ```
 
 ## Basic commands to handle the terminal
@@ -95,7 +95,7 @@ $ tail <file>
 This changes the directory/locations where you are in. As the name implies, **C**hange **D**irectory or **C**ontrolling **D**irectory. The path can be absolute or not
 
 ```bash
-$ cd <path>
+$ cd [path]
 ```
 
 This shows the **l**i**s**ts of directories or files in a directory. You can use `-a` to list all information and `-l` to lists paths and combining them like `-ali` will do both
@@ -107,7 +107,7 @@ $ ls
 piping content is using the pipe `|` to send a process to another process
 
 ```bash
-$ <command> | <the command that the previous command is sending to>
+$ [command] | [the command that the previous command is sending to]
 ```
 
 For example, if you use `ps aux`, you can pipe it to less to use less
@@ -124,13 +124,13 @@ Output: the output of ps aux but able to use less manipulation
 This is the **man**ual of a command. This shows what operations the command does and do. Only works for **external commands**
 
 ```bash
-$ man <command>
+$ man [command]
 ```
 
 This shows information of an internal command when you need **HELP**
 
 ```bash
-$ help <command>
+$ help [command]
 ```
 
 ## Working with files and directories
@@ -138,54 +138,54 @@ $ help <command>
 This creates a new empty directory. `mk` meaning make, `dir` meaning directory
 
 ```bash
-$ mkdir <name>
+$ mkdir [name]
 ```
 
 This removes an **empty** directory. `rm` meaning remove, `dir` meaning directory. Got be forceful and recursive to remove all contents (note, dir decided to not exist)
 
 ```bash
-$ rmdir <directory>
+$ rmdir [directory]
 ```
 
 This removes files and directories, and to repeat said action within a content, you need to do be forceful and recursive `rf`. Showing some more utility
 
 ```bash
-$ rm <content>
-$ rm -rf <content> (Recursively remove forcefully the data)
+$ rm [content]
+$ rm -rf [content] (Recursively remove forcefully the data)
 ```
 
 This copies content from one place to another. This is from the name **c**o**p**y This is contrary to another popular version of this abbreviation
 
 ```bash
-$ cp <source> <destination>
-$ cp <source> <newname> (Copies with a new name) 
-$ cp -u <source> <destination> (Copies with an update)
-$ cp -i <source> <destination> (Initializes a prompt)
-$ cp -r <source directory>(Copies directory and its content recursively)
+$ cp [source] [destination]
+$ cp [source] [newname] # Copies with a new name
+$ cp -u [source] [destination] # Copies with an update 
+$ cp -i [source] [destination] # Initializes a prompt
+$ cp -r [source directory] # Copies directory and its content recursively
 ```
 
 This just moves files. `mv` meaning the short hand for **m**o**v**e. Unfortunately not a free movie command
 
 ```bash
-$ mv <source> <destination>
-$ mv <source> <newname> (changes the source name)
+$ mv [source] [destination]
+$ mv [source] [newname] # changes the source name
 ```
 
 This repeats a line or input from the input 
 
 ```bash
-$ echo <message>
+$ echo [message]
 ```
 
 This will zip a file using the `g` app
 
 ```bash
-$ gzip <source>
+$ gzip [source]
 ```
 
 This will unzip a file
 ```bash
-4 gunzip <file>
+4 gunzip [file]
 ```
 
 ## Keyboard shortcuts
@@ -201,7 +201,7 @@ In the terminal's vi, there is the multiple modes, there is the; `Last Line mode
 When you use `vi` solely, you will be able to edit files that are already existing or create a new file if it doesnt exist
 
 ```bash
-$ vi <fileName>
+$ vi [fileName]
 ```
 
 ### buttons in the command mode
@@ -286,16 +286,16 @@ This gives a snapshot of the processes
 
 ```bash
 $ ps
-$ ps a (Shows all of the processes)
-$ ps aux (Shows all of the processes as a snapshot)
+$ ps a # Shows all of the processes
+$ ps aux # Shows all of the processes as a snapshot
 ```
 
 to kill a process, you use `kill` against the process id `pID`, and to force kill, it is `-9` which is the highest levels which goes from `-1` to `-9`
 
 ```bash
-$ kill <pID>
+$ kill [pID]
 or
-$ kill %<jobID>
+$ kill %[jobID]
 or to force
 $ kill -9
 ```
@@ -303,7 +303,7 @@ $ kill -9
 `sleep` delays a process, the number afterwards is the amount of time a process, by default, it is by seconds
 
 ```bash
-$ sleep <number>
+$ sleep [number]
 ```
 
 In sleep, it will be delayed in the background to allow multitasking, to see the jobs, you can do `jobs`
@@ -331,15 +331,16 @@ $ ls -l
 
 -rwxr-x-x+ 1 sam pubs 1048 06-10 10:44 memo
 
-Type of file: -rwxr
-File access ermissions: -xr
-ACL flag: x+
-number: 1
-file owner: sam
-Groups: pubs
-size: 1048
-Date (and time) of modification: 06-10 10:44
-filename: memo
+
+# Type of file: -rwxr
+# File access ermissions: -xr
+# ACL flag: x+
+# number: 1
+# file owner: sam
+# Groups: pubs
+# size: 1048
+# Date (and time) of modification: 06-10 10:44
+# filename: memo
 ```
 
 For shortcuts
@@ -353,7 +354,7 @@ For shortcuts
 
 create a hard link with
 ```bash
-$ ln <target_file> <name of the new file>
+$ ln [target_file] [name of the new file]
 ```
 
 Hard links is the aboslute path to the file
@@ -370,7 +371,7 @@ It works as like aliases for a file
 To create one you do
 
 ```bash
-ln -s <target_file> <name_of_soft
+ln -s [target_file] [name_of_soft]
 ```
 
 ## Globbing
@@ -494,7 +495,7 @@ $ echo \?
 Alias is a temporary way to execute a specific command
 
 ```bash
-$ alias <alias_name>=`<command>`
+$ alias [alias_name]=`[command]`
 ```
 
 You can also overwrite commands in the system
@@ -522,7 +523,7 @@ Both of these will output the string date and outting it into a variable
 
 One could also store into a variable like
 ```bash
-$ variable_name=$(<command>)
+$ variable_name=$([command])
 ```
 
 ## Environment Variables
@@ -542,7 +543,7 @@ By convention, they are all uppercase
 
 To make your own environmental variable, you can do 
 ```bash
-$ export variable_name=<variable_name>
+$ export variable_name=[variable_name]
 ```
 This will make the variable the default for the current process
 
@@ -555,7 +556,7 @@ To make a variable temporary to a current script, you need to pass it through a 
 This is used to make sure it is only passed to a specific script
 
 ```bash
-$ temp_value=<value> <script_name>
+$ temp_value=[value] [script_name]
 ```
 
 ## Bash Processing
