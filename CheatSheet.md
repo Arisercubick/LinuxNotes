@@ -646,3 +646,15 @@ $ wc [options...] [path]
 Options:
 `-w` shows the amount of words (Default)
 `-l` shows the amount of lines
+
+## Basic Regex and Extended
+
+### Basic Regex
+
+| Pattern | Explanations |
+|---------|--------------|
+| * | 0 or more of the previous character |
+| ? | Matches any one (1) character |
+| [list] | Matches any one 91) in the list of characters, e.g. [abc] matches one a or one b or one c |
+| [^list] | This is the inverted form and works with ! or ^ at the start which matches places without the patterns |
+| . | One character of any character. Basically the `?` for globbing |
