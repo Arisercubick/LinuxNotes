@@ -588,13 +588,24 @@ It will output a number which indicated what happened. For some;
 - `1` means an error in the command
 - `126` means the command is not executable
 
+## Command substitution
+
+Command substition is the way to substitute commands in the string
+
+```bash
+$ echo "This is the result $(find ~ -name "*.sh" | wc -l)"
+
+# Output: this is the result: 5
+```
+
+To do command substitution, you need to put a command inside `$()`
 
 ## Looking in Files
 
 In linux systems, there are two commands called `files` and `grep`
 
 It applies globbing.
-- `find`: Search by file type
+- `find`: Search by file attribute
 - `grep`: Search inside files
 
 ### grep
@@ -602,10 +613,36 @@ It applies globbing.
 grep goes into files and find matchines
 
 ```bash
-$ grep [options] "pattern" [filename]
+$ grep [options...] "pattern" [filename]
 ```
 
 Options include:
 `-i` for ignore case sensitivity so `grep -i "error"` will include "Error", "ERROR" and "ErRoR"
 `-v` for invert the match so lines that dont contain the patter
 `-w` matches whole words in the line
+
+### Find 
+
+find looks for patterns based on the value provided 
+
+```bash
+$ wc [path] [options...] [value for the option] 
+```
+
+Options:
+`-name` to find by name
+`-l` to search for links
+`-d` to search for directories
+
+
+### wc
+
+`wc` counts the words, lines or so on in a file
+
+```bash
+$ wc [options...] [path]  
+```
+
+Options:
+`-w` shows the amount of words (Default)
+`-l` shows the amount of lines
