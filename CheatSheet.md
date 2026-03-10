@@ -617,9 +617,9 @@ $ grep [options...] "pattern" [filename]
 ```
 
 Options include:
-`-i` for ignore case sensitivity so `grep -i "error"` will include "Error", "ERROR" and "ErRoR"
-`-v` for invert the match so lines that dont contain the patter
-`-w` matches whole words in the line
+- `-i` for ignore case sensitivity so `grep -i "error"` will include "Error", "ERROR" and "ErRoR"
+- `-v` for invert the match so lines that dont contain the patter
+- `-w` matches whole words in the line
 
 ### Find 
 
@@ -630,9 +630,9 @@ $ wc [path] [options...] [value for the option]
 ```
 
 Options:
-`-name` to find by name
-`-l` to search for links
-`-d` to search for directories
+- `-name` to find by name
+- `-l` to search for links
+- `-d` to search for directories
 
 
 ### wc
@@ -644,8 +644,8 @@ $ wc [options...] [path]
 ```
 
 Options:
-`-w` shows the amount of words (Default)
-`-l` shows the amount of lines
+- `-w` shows the amount of words (Default)
+- `-l` shows the amount of lines
 
 ## Basic Regex and Extended
 
