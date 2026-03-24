@@ -655,7 +655,18 @@ Options:
 | Pattern | Explanations |
 |---------|--------------|
 | * | 0 or more of the previous character |
-| ? | Matches any one (1) character |
-| [list] | Matches any one 91) in the list of characters, e.g. [abc] matches one a or one b or one c |
+| [list] | Matches any one (1) in the list of characters, e.g. [abc] matches one a or one b or one c |
 | [^list] | This is the inverted form and works with ! or ^ at the start which matches places without the patterns |
 | . | One character of any character. Basically the `?` for globbing |
+
+### Extended Regex
+
+To use these, we need to do `egrep` or `grep -E`
+
+| Pattern | Explanations |
+|---------|--------------|
+| ? | Matches 0 or 1 ouccurences of the previous character |
+| + | One or more ouccurrences of the previous character |
+| {n, m} | A minimum of `n` and a maximum of `m` f the previous character |
+| (ab \| cd) | The parenthesis represents a grouping \| and represents a or. So in this case, it is ab OR cd |
+
