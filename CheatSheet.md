@@ -648,7 +648,7 @@ Options:
 - `-w` shows the amount of words (Default)
 - `-l` shows the amount of lines
 
-## Basic Regex and Extended
+## Basic Regex and Extended Regex
 
 ### Basic Regex
 
@@ -669,4 +669,24 @@ To use these, we need to do `egrep` or `grep -E`
 | + | One or more ouccurrences of the previous character |
 | {n, m} | A minimum of `n` and a maximum of `m` f the previous character |
 | (ab \| cd) | The parenthesis represents a grouping \| and represents a or. So in this case, it is ab OR cd |
+
+### POSIX
+
+POSIX, meaning  *P*ortable *O*perating *S*ystem *I*nterface, is a standard within Linux to define character group
+
+| POSIX | Expression they represent |
+|-------|---------------------------|
+| [[:alnum:]] | [a-zA-Z0-9] |
+| [[:alpha:]] | [a-zA-Z] |
+| [[:digit:]] | [0-9] |
+| [[:lower:]] | [a-z] |
+| [[:blank:]] | [ \t] (Note, there is a space before \\t) |
+| [[:space:]] | [ \t\n\r] etc. (Note, there is an space before \t)
+| [[:upper:]] | [A-Z] |
+
+Example:
+```bash
+$ grep [[:digit:]] word.txt
+```
+
 
