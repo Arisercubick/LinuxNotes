@@ -676,13 +676,13 @@ POSIX, meaning  *P*ortable *O*perating *S*ystem *I*nterface, is a standard withi
 
 | POSIX | Expression they represent |
 |-------|---------------------------|
-| [[:alnum:]] | [a-zA-Z0-9] |
-| [[:alpha:]] | [a-zA-Z] |
-| [[:digit:]] | [0-9] |
-| [[:lower:]] | [a-z] |
-| [[:blank:]] | [ \t] (Note, there is a space before \\t) |
-| [[:space:]] | [ \t\n\r] etc. (Note, there is an space before \t)
-| [[:upper:]] | [A-Z] |
+| \[\[:alnum:\]\] | [a-zA-Z0-9] |
+| \[\[:alpha:\]\] | [a-zA-Z] |
+| \[\[:digit:\]\] | [0-9] |
+| \[\[:lower:\]\] | [a-z] |
+| \[\[:blank:\]\] | [ \t] (Note, there is a space before \\t) |
+| \[\[:space:\]\] | [ \t\n\r] etc. (Note, there is an space before \t)
+| \[\[:upper:\]\] | [A-Z] |
 
 Example:
 ```bash
