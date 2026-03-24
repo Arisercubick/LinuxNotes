@@ -730,9 +730,16 @@ $ [[ 4 -eq 5]] # This evaluated to false since 4 isn't equal to 5
 
 for numeric values:
 | symbol | meaning `in java` |
-|--------|---------|
+|--------|-------------------|
 | -eq | Equals to `==` |
 | -gt | greater than `>` |
 | -ge | greater than or equal `>=` |
 | -lt | less than `<` |
 | -le | less than or equal `<=` |
+
+Logic operators
+| symbol | meaning |
+|--------|---------|
+| `&&` | AND |
+| `||` | OR |
+| `!` | NOT |
