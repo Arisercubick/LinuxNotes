@@ -388,6 +388,7 @@ $ chmod u+rw text.txt # We take into account the file's default permission is no
 
 And for modes 
 | symbol | meaning |
+|--------|---------|
 | `+` | add permissions |
 | `-` | Remove permissions |
 | `=` | set exact permissiom|
