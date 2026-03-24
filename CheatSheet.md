@@ -741,5 +741,5 @@ Logic operators
 | symbol | meaning |
 |--------|---------|
 | `&&` | AND |
-| `||` | OR |
+| `\|\|` | OR |
 | `!` | NOT |
