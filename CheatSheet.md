@@ -333,7 +333,7 @@ $ ls -l
 
 
 # Type of file: -rwxr
-# File access ermissions: -xr
+# File access permissions: -xr
 # ACL flag: x+
 # number: 1
 # file owner: sam
@@ -346,6 +346,51 @@ $ ls -l
 For shortcuts
 `ctrl + c`: Closes a job
 `ctrl + z`: Put a job in the background
+
+### chmod and file permission changes 
+
+For the file permission values, it goes to \[user\]\[group\]\[other\]
+
+the values are three  values
+
+| numeric value | alphabet numbers | meaning |
+|---------------|------------------|---------|
+| 1 | --x | means execute |
+| 2 | -w- | means write |
+| 4 | r-- | means read |
+
+#### Changing permissions
+
+In bash, you can change permissions of a file through `chmod`
+
+```Bash
+$ chmod [values] [FILE NAME]
+```
+
+If you want to change, you do the values based on \[owner\]\[group\]\[other\]
+
+For numeric values, it means if you want to only include read and write permissions for the owner, and no permissions for the group and others for a text.txt file, you do
+```Bash
+$ chmod 600 text.txt
+```
+
+If you are using symbolic mode, you do
+
+```bash 
+$ chmod u+rw text.txt # We take into account the file's default permission is none for everyone
+```
+
+| Symbol | meaning |
+|--------|---------|
+| u | user |
+| g | group |
+| o | other |
+
+And for modes 
+| symbol | meaning |
+| `+` | add permissions |
+| `-` | Remove permissions |
+| `=` | set exact permissiom|
 
 ## Links
 
