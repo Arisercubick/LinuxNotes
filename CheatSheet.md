@@ -672,7 +672,7 @@ To use these, we need to do `egrep` or `grep -E`
 
 ### POSIX
 
-POSIX, meaning  *P*ortable *O*perating *S*ystem *I*nterface, is a standard within Linux to define character group
+POSIX, meaning  **P**ortable **O**perating **S**ystem **I**nterface, is a standard within Linux to define character group
 
 | POSIX | Expression they represent |
 |-------|---------------------------|
