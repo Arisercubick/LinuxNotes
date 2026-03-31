@@ -737,6 +737,17 @@ $ grep [[:digit:]] word.txt
 
 ## Programming and Scripting Language
 
+Important Note: shellcheck is important to check scripts
+```bash
+$ sudo apt install shellcheck
+```
+
+And inside vi makes lines in vi for one to count 
+```bash
+# In vi
+:setnumber
+```
+
 ### Code structure
 
 In bash, there is code structure to put inside the code
@@ -789,3 +800,4 @@ Logic operators
 | `&&` | AND |
 | `\|\|` | OR |
 | `!` | NOT |
+
