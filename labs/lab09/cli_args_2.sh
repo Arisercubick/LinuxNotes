@@ -3,8 +3,9 @@
 # Navigator: Aris John Apolinario
 # Date: 2026-03-27
 
-if [[ $# -lt 2 ]]; then
-	exit
+if [[ $# -lt 2 || $# -gt 2 ]]; then
+	echo "Well this wont work"
+	exit 1
 fi
 
 if [[ $1 -ge $2 ]]; then
