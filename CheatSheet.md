@@ -939,3 +939,14 @@ elif; then
 	commands 
 fi
 ```
+
+In bash, there is also general expression operator to see if it is true or false
+
+| symbol | meaning |
+|--------|---------|
+| =~ | comparing a string to a regex |
+
+To do this, you need to do:
+```bash
+[[ "String" =~ regex_expression ]]
+```
