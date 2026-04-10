@@ -767,6 +767,96 @@ for example:
 $ echo $[variable name] #This prints the contents in the variable
 ```
 
+#### Special Variables
+
+In bash, there is special variables that one could hold if there is passing variables
+
+for example, when you do
+
+```
+$ bash script.sh Hello
+```
+
+It passes the variable Hello into the script
+
+Special variables include
+| symbol | meaning |
+|--------|---------|
+| $0 | script name |
+| $1 | first argument |
+| $6 | sixth argument | 
+| ... | and so on in ${n} format |
+| $* | expands all the armguments into a string |
+| $@ | This expands all arguments but seperated from each other |
+| $# | Number of arguments |
+| $$ | process ID of the script |
+| $? | expands the return code of the last command |
+
+`basename` command removes the directory and suffixes from file names
+
+example
+```bash
+echo $0 # ./script.sh
+echo $(basename $0) # script.sh
+```
+
+**DEBUG**
+
+You can use debug before activating the script to know commands that are running
+
+You can use the shell’s -x option to help debug a script
+This option causes the shell to display each command after it expands it, but before it runs the command.
+
+Example:
+```bash
+$ bash -x welcome.sh # displays the command and argument as the script runs
++ name=Bob
++ echo 'Hello Bob'
+Hello Bob
++ echo Goodbye
+Goodbye
+$
+```
+
+For a script like 
+```bash
+$ cat welcome.sh
+#!/bin/sh
+#simple program to greet users
+name=“Bob”
+echo “Hello $name”
+echo “Goodbye”
+```
+
+Other debugging options include
+- `-n` to check for syntax of the script but does not execute the commands
+- `-v` means verbose, displays the lines of code while executing the shell script
+
+Tracing only part(s) of the script
+```bash
+set –x # start debugging
+echo “hello $USER”
+set +x # stop debugging
+```
+
+Using set -x causes traces of the following commands and
+arguments between to be shown until EOF or set +x
+
+We can also pass temporary values 
+```bash
+#!/bin/bash
+if [[ -n “$DEBUG” ]]; then # also: [[ “$DEBUG” == “1” ]]
+ echo “Entering debug mode…”
+ set –x # start debugging
+fi
+```
+
+And outside, execute the script like
+```bash
+$ DEBUG=1 ./my_script.sh
+```
+
+
 ### Conditional expressions
 
 In the conditional expressions, it is always evaluated to true `0` or false `1`
@@ -800,4 +890,53 @@ Logic operators
 | `&&` | AND |
 | `\|\|` | OR |
 | `!` | NOT |
+
+For string values:
+| symbol | meaning |
+|--------|---------|
+| = | arguments are equal |
+| == | arguments are equal (same as =) |
+| != | arguments are not equal |
+| < | left argument is smaller than right arugment |
+| > | right argument is smaller than the left hand atgument |
+| -n | String is not null |
+| -z | String is null |
+
+For Files
+Like
+```bash
+[[ -x ~/myfile ]]
+```
+| symbol | meaning |
+|--------|---------|
+| -x | file is executable |
+| -d | file is a directory |
+| -e | the file exists |
+| -f | the file is a regular file on the device |
+| -s | the file is not empty (size greater than 0) |
+| -h | the file is a symbolic link |
+
+for If Statements 
+
+To use if statements, you need to use `if...then...else`
+
+Example:
+```bash
+if [conditional expression];
+	then 
+		commands
+	else 
+		commands 
+fi
+```
+
+for else if
+
+```bash
+if [conditional expression]; then 
+	commands
+elif; then
+	commands 
+fi
+```
 
