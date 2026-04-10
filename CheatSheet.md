@@ -890,7 +890,6 @@ Logic operators
 | `&&` | AND |
 | `\|\|` | OR |
 | `!` | NOT |
-<<<<<<< HEAD
 
 For string values:
 | symbol | meaning |
@@ -940,6 +939,3 @@ elif; then
 	commands 
 fi
 ```
-
-=======
->>>>>>> 0cb9ae713f849aadf7e95e3e721b9816dc5c0a9e
