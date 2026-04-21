@@ -965,7 +965,7 @@ functionName() {
 }
 
 # To call a function, you put it in there just the function name
-functionName]
+functionName
 ```
 
 ### Loops 
