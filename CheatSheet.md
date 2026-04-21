@@ -950,3 +950,51 @@ To do this, you need to do:
 ```bash
 [[ "String" =~ regex_expression ]]
 ```
+
+### Functions
+
+In bash scripting, you can use functions to recall and repeat a set amount of code from multiple parts of the script 
+```bash 
+# function is not necessary
+function functionName() {
+	# code
+}
+
+functionName() {
+	# code
+}
+
+# To call a function, you put it in there just the function name
+functionName]
+```
+
+### Loops 
+
+In scripting, you can do loops to manage a system
+
+for a simple while loop, it can be:
+```bash
+while [ condition ]; do
+	# code
+done
+```
+
+it can also be written as
+```bash
+while [ condition ]
+do
+	# code
+done
+```
+
+In bash, there is for loops, this is used when there is a set amount of elements in it
+```bash
+for i in $*; do
+	# code
+done
+```
+This operates more like a for each loop in bash
+
+You can also do everything in one line seperating everything with semicolons
+```bash
+for i in $*; do echo $i; done 
