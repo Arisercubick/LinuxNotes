@@ -998,3 +998,4 @@ This operates more like a for each loop in bash
 You can also do everything in one line seperating everything with semicolons
 ```bash
 for i in $*; do echo $i; done 
+```
