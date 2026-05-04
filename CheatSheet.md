@@ -133,6 +133,13 @@ This shows information of an internal command when you need **HELP**
 $ help [command]
 ```
 
+This tells you what kind of command you are dealing with e.g., an external binary, a shell built-in, or an alias.
+
+```bash
+$ type [command]
+$ type -a [command] # Shows all locations/types
+```
+
 ## Working with files and directories
 
 This creates a new empty directory. `mk` meaning make, `dir` meaning directory
@@ -188,6 +195,13 @@ This will unzip a file
 4 gunzip [file]
 ```
 
+This creates a single file from a list of files or a directory tree, also known as a tarball. `c` creates, `x` extracts, `v` is verbose, `f` specifies the filename, and `z` uses gzip compression.
+```bash
+$ tar -cvf [name.tar] [directory] # Creates an archive
+$ tar -xvf [name.tar] # Extracts the archive
+$ tar -cvzf [name.tar.gz] [directory] # Creates and zips simultaneously
+```
+
 ## Keyboard shortcuts
 
 - `ctrl` + `r` this searches information in the terminal
@@ -225,7 +239,7 @@ The last line mode is the global control over the file. To enter this, you need 
 
 Scripting in bash is usually in a .sh file for bash
 
-```
+```bash
 filename.sh
 ```
 
@@ -236,6 +250,11 @@ In this example, this will execute bash
 
 ```sh
 #!/bin/bash
+```
+
+This executes a script within the *current* shell environment[cite: 3]. Variables and functions created inside the script will remain active in your terminal even after the script finishes.
+```bash
+$ source [filename]
 ```
 
 ## Sudo and installing software
@@ -999,3 +1018,223 @@ You can also do everything in one line seperating everything with semicolons
 ```bash
 for i in $*; do echo $i; done 
 ```
+
+### Operations
+
+In bash, one can perform mathematical formulas and assigned to a variable
+To do arithmetic operations in bash, you need to do
+```bash
+$(([operation]))
+```
+
+So you can do basic arithmetic like
+```bash
+$((5 + 3))
+```
+and to return it into a variable, you need to asigned a variable for it
+```bash 
+var=$((5 + 3)) # var is now value 8
+echo $var # THis will echo 8 into the terminal
+```
+
+## Archiving and Compression
+
+This creates a single file from a list of files or a directory tree,
+also known as a tarball. `c` creates, `x` extracts, `v` is
+verbose, `f` specifies the filename, and `z` uses gzip
+compression.
+
+``` bash
+$ tar -cvf [name.tar] [directory] # Creates an archive
+$ tar -xvf [name.tar] # Extracts the archive
+$ tar -cvzf [name.tar.gz] [directory] # Creates and zips simultaneously
+```
+
+This acts similarly to gzip but creates `.zip` files and is highly
+compatible with Windows.
+
+``` bash
+$ zip [name.zip] [file]
+$ unzip [name.zip]
+```
+
+## Advanced Command and Process Control
+
+This tells you what kind of command you are dealing with (e.g., an
+external binary, a shell built-in, or an alias).
+
+``` bash
+$ type [command]
+$ type -a [command] # Shows all locations/types
+```
+
+This runs a command in the background, allowing you to keep using your
+terminal while the process runs.
+
+``` bash
+$ [command] &
+```
+
+These keyboard shortcuts manage foreground jobs: - `ctrl` + `c`
+Interrupts and kills the current foreground job. - `ctrl` +
+`z` Suspends (pauses) the current foreground job and puts it in the
+background.
+
+This brings a suspended or background job back to the foreground (`fg`)
+or restarts a suspended job in the background (`bg`).
+
+``` bash
+$ fg [jobID]
+$ bg [jobID]
+```
+
+## File Ownership, Inodes, and Drives
+
+This changes the user ownership of a file. Only the
+root/superuser can do this.
+
+``` bash
+$ sudo chown [new_owner] [file]
+$ sudo chown -R [new_owner] [directory] # Recursively changes owner
+$ sudo chown [new_owner]:[new_group] [file] # Changes owner and group at once
+```
+
+This changes the group ownership of a file
+
+``` bash
+$ chgrp [new_group] [file]
+```
+
+**Security Best Practice (Principle of Least Privilege):** Never use
+`777` permissions; grant only the specific access needed (e.g., `644`
+for files, `755` for directories).
+
+When you create a file, it gets an "index node" (inode) containing its
+system attributes. Use the `-i` flag to see it.
+
+``` bash
+$ ls -i [file]
+```
+
+This lists the block storage devices (drives and partitions) and their
+mount points.
+
+``` bash
+$ lsblk
+```
+
+This shows the Disk Free (`df`) space across file systems.
+The `-h` makes it human-readable (Megabytes/Gigabytes).
+
+``` bash
+$ df -h
+```
+
+This shows Disk Usage (`du`) for specific files or directories.
+
+``` bash
+$ du -sh [directory] # Summarizes in human-readable format
+```
+
+## Advanced Searching and Sorting
+
+Additional `find` options allow you to search by exact size or specific
+file type.
+
+``` bash
+$ find [path] -type f # Finds only regular files
+$ find [path] -type d # Finds only directories
+$ find [path] -size +10M # Finds files larger than 10 Megabytes
+```
+
+This sorts lines of a text file alphabetically or numerically (with
+`-n`).
+
+``` bash
+$ sort [file]
+$ sort -nr [file] # Sorts numerically and in reverse
+```
+
+This reports or omits repeated adjacent lines.
+
+``` bash
+$ cat [file] | sort | uniq
+```
+
+## Advanced Scripting and Execution
+
+This executes a script within the *current* shell environment
+
+``` bash
+$ source [filename][cite: 3]
+```
+
+This is a Here Document (HereDoc).
+
+``` bash
+$ cat << EOF > [file.html]
+<html>
+<body>Hello World!</body>
+</html>
+EOF
+```
+
+Bash interprets single and double quotes differently.
+
+``` bash
+$ echo "Hello $USER"
+$ echo 'Hello $USER'
+$ echo -e "Hello
+World"
+```
+
+Bash only evaluates integer math (no decimals).
+
+``` bash
+$ echo $(( 8 % 3 ))
+$ let x=y*235+10
+$ (( count++ ))
+```
+
+``` bash
+function my_func() {
+    local var1="Secret"
+    return 15
+}
+```
+
+``` bash
+while read -r line; do
+    echo "Processing: $line"
+done < [filename]
+```
+
+``` bash
+case $variable in
+    (pattern1)
+        commands
+        ;;
+    (pattern2)
+        commands
+        ;;
+esac
+```
+
+## System Monitoring and Networking
+
+``` bash
+$ journalctl
+$ journalctl -u [service]
+$ journalctl -f
+```
+
+``` bash
+$ ss -tuln
+```
+
+``` bash
+$ ping -c 3 -W 1 [address]
+```
+
+You can write scripts directly on a remote server using VS Code's
+Remote-SSH extension.
