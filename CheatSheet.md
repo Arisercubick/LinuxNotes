@@ -1238,3 +1238,23 @@ $ ping -c 3 -W 1 [address]
 
 You can write scripts directly on a remote server using VS Code's
 Remote-SSH extension.
+
+
+## find 
+
+You can use the `find` command to search around for files
+```bash
+$ find [path] [options] [expression]
+
+$ find . -name "file.txt" # This fineds files that are named "file.txt"
+```
+
+These are the options
+| option | what it does |
+-------------------------
+| -name | case sensitive search for the file name |
+| -iname | case insensitive search for the file name |
+| -type | looks for specific types, f for files, d for directories and so on |
+| -size | checks for a sepcific size |
+| -empty | looks for empty files |
+ 
