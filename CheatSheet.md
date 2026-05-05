@@ -989,7 +989,7 @@ functionName
 
 ### Loops 
 
-In scripting, you can do loops to manage a system
+In scrnting, you can do loops to manage a system
 
 for a simple while loop, it can be:
 ```bash
@@ -1017,6 +1017,17 @@ This operates more like a for each loop in bash
 You can also do everything in one line seperating everything with semicolons
 ```bash
 for i in $*; do echo $i; done 
+```
+
+#### Inpit redirection using read
+
+In bash, you can use read in a loop to read information from the file 
+```bash
+#!/bin/bash
+
+while read my_var; do
+	echo $my_var
+done < ips.txt
 ```
 
 ### Operations
