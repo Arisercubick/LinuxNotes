@@ -1261,8 +1261,9 @@ $ find . -name "file.txt" # This fineds files that are named "file.txt"
 ```
 
 These are the options
+
 | option | what it does |
--------------------------
+|--------|--------------|
 | -name | case sensitive search for the file name |
 | -iname | case insensitive search for the file name |
 | -type | looks for specific types, f for files, d for directories and so on |
