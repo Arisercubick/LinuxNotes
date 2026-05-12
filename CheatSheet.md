@@ -734,6 +734,8 @@ To use these, we need to do `egrep` or `grep -E`
 | + | One or more ouccurrences of the previous character |
 | {n, m} | A minimum of `n` and a maximum of `m` f the previous character |
 | (ab \| cd) | The parenthesis represents a grouping \| and represents a or. So in this case, it is ab OR cd |
+| $ | end of the string is this |
+| ^ | start of the string |
 
 ### POSIX
 
@@ -753,6 +755,8 @@ Example:
 ```bash
 $ grep [[:digit:]] word.txt
 ```
+
+<img src="img/1778595501088-5015808b-d926-4046-9ece-d17916ba4224_1.jpg" alt="By Dave Child (DaveChild) ">
 
 ## Programming and Scripting Language
 
